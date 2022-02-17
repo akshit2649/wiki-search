@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+a {
+    margin: 0 10px;
+}
+nav {
+    display: flex;
+    background-color: aqua;
+}
+body {
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body.dark {
+    background-color: #222;
+    color: white;
+}
+
+.sun,
+.moon {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+}
+img {
+    height: 70px;
+    width: auto;
+    display: inline-block;
+    padding-right: 20px;
+}
+main {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searching {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr auto;
+}
+
+.title {
+    justify-self: center;
+    font-size: 100px;
+    letter-spacing: -11px;
+    font-weight: bold;
+    grid-column: 2 / 5;
+}
+
+.searchEntry {
+    grid-row: 2;
+    grid-column: 2 /5;
+    border: 1px solid gray;
+    border-radius: 500px;
+    padding-right: 18px;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+}
+
+.text {
+    height: 40px;
+    border: 0px solid white;
+    border-radius: 500px;
+    outline: none;
+    padding-left: 18px;
+    font-size: 15px;
+}
+
+.clear {
+    padding-left: 20px;
+}
+.clear i {
+    margin-top: 14px;
+    padding-left: 2px;
+    margin-right: 2px;
+    color: red;
+}
+
+input[type="text"] {
+    border: 0;
+    padding-top: 6px;
+}
+
+.button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    outline: none;
+    width: 48px;
+    height: 48px;
+}
+
+.button i {
+    font-size: 20px;
+}
+
+.button i:focus,
+.button i:hover {
+    padding-bottom: 7px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.clear i:focus,
+.clear i:hover {
+    margin-top: 9px;
+}
+
+.searchEntry:hover,
+.searchEntry:focus-within {
+    border: none;
+    box-shadow: 0px 2px 5px 2px rgb(148, 147, 147);
+}
+
+/* #####After the seach has happened */
+.searchToggle {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.toggleTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.titleToggle {
+    padding-left: 20px;
+    font-size: 46px;
+    letter-spacing: -6px;
+}
+
+.searchEntryToggle {
+    margin-left: 30px;
+    align-self: center;
+    flex-shrink: 2;
+}
+/* Ending here */
+
+.results {
+    margin-top: 5px;
+    width: 60%;
+}
+
+.stats {
+    color: gray;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.resultTitle {
+    display: inline-block;
+    font-size: 25px;
+    color: rgb(66, 94, 252);
+    font-weight: bold;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
+}
+.resultItem:first-child {
+    margin-top: -10px;
+}
+.resultTitle:hover {
+    text-decoration: underline;
+}
+
+.resultContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.resultDescription {
+    font-size: 16px;
+    letter-spacing: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.resultItem {
+    min-height: 90px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.pagination {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.prev {
+    visibility: hidden;
+}
+.page-btn {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+span {
+    margin: 0px 5px;
+}
+footer a {
+    color: gray;
+}
+footer a:hover {
+    color: rgb(67, 6, 124);
+}
+footer {
+    padding-top: 15px;
+    color: gray;
+    font-size: 11px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footerBottom {
+    color: gray;
+    font-size: 11px;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
