@@ -1,2 +1,2 @@
 # wiki-search
-A wikipedia powred website which diplays information about the queries entered by the user.
+A wikipedia powred website which displays information about the queries entered by the user.
